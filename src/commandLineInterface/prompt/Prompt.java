@@ -17,24 +17,34 @@ import java.util.Arrays;
 
 public class Prompt {
 
-	// the prompt variable holds the icon that is printed on the screen showing
-	// that the cli program is running
+	/*
+	The prompt variable holds the icon that is printed
+	on the screen showing that the cli program is running
+	 */
 	private String prompt;
 
-	// the command is responsible for the command the user wants to run, it may
-	// have zero of more arguments
+	/*
+	The command is responsible for the command the user
+	wants to run, it may have zero of more arguments
+	 */
 	private String command;
 
-	// the arguments are the optional parameters that may be needed for certain
-	// commands
+	//
+	/*
+	The arguments are the optional parameters that may
+	be needed for certain commands
+	 */
 	private String[] arguments;
 
-	// the InputHelper class sets up a Scanner and a simple way to get Strings
-	// as input from the user
+	/*
+	The InputHelper class sets up a Scanner and a simple way
+	to get Strings as input from the user
+	 */
 	private InputHelper input;
 
-	// no arg constructor, sets the prompt to '>>>', sets command to an empty
-	// string, and sets the arguments to null
+	/**
+	 * No arg constructor.
+	 */
 	public Prompt() {
 		this.prompt = ">>>";
 		this.command = "";
@@ -42,19 +52,28 @@ public class Prompt {
 		this.input = new InputHelper();
 	}
 
-	// getter for the command variable, gets the current command as a String
+	/**
+	 * Getter for command variable
+	 *
+	 * @return the CLI command the user wants to perform
+	 */
 	public String getCommand() {
 		return this.command;
 	}
 
-	// getter for the arguments variable, gets arguments, if they exits, as an
-	// array
+	/**
+	 * Getter for the arguments variable
+	 *
+	 * @return the arguments, if any, for the specified command
+	 */
 	public String[] getArguments() {
 		return arguments;
 	}
 
-	// this method reads the string given at the command line and separates the
-	// command and the arguments, populating the appropriate variables
+	/**
+	 * Reads the String given at the CLI and separates the
+	 * command and its arguments, populating the appropriate variables
+	 */
 	public void getCLICommand() {
 
 		// prompt the user to enter a command and return their answer as a String
@@ -83,6 +102,13 @@ public class Prompt {
 
 	// if we have a command, set the instance variable to it and set our
 	// arguments variable if we have arguments
+
+	/**
+	 * Separate the command and arguments, placing them in their
+	 * specified variables
+	 *
+	 * @param givenCommand the array containing the input from the user
+	 */
 	private void getCommandAndArguments(String[] givenCommand) {
 
 	    // set first supplied value as the command

@@ -26,9 +26,18 @@ public class InputHelper {
 		this.input = new Scanner(System.in);
 	}
 
-	// takes any question and a String and returns the answer as a String
+	/**
+	 * Prompts user with a specified question and returns their answer
+	 * as a String.
+	 *
+	 * @param question what to display on the console for the user to respond to
+	 * @return the user's answer
+	 */
 	public String askForCommand(String question) {
+
 		System.out.print(question);
+
+		// the user's answer
 		String answer = this.input.nextLine();
 		return answer;
 	}
