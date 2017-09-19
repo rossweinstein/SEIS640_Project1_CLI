@@ -21,7 +21,13 @@ import commandLineInterface.commands.tasks.taskController.FunWithStringsControll
 
 public class CommandCollection {
 
-    // collects all the CLICommands that need to be included within the CLI program.
+    /**
+     * Collect all the CLICommands that need to be included within the CLI program. Each
+     * command is checked to ensure that all command names are unique. If any names are
+     * duplicates, throws an exception and stops adding commands to list.
+     *
+     * @return the collected list of all CLICommands
+     */
     public static List<CLICommand> getAllCommands() {
         List<CLICommand> commandList = new ArrayList<>();
         try {
@@ -42,8 +48,15 @@ public class CommandCollection {
         return commandList;
     }
 
-    // make sure we do not have any name collisions, will throw an error if there are two commands with
-    // the same name. Program will not crash, but no new commands will be added once an exception is found
+    /**
+     * Checks that there are no duplicates names within our commandList.
+     *
+     * @param commandList the list to check duplicate names against
+     * @param command the new command names to be verified for uniqueness
+     * @return the new Command, if verified; exception if any name collision
+     * @throws Exception when we try to add a new command where the already exists
+     *                  a command with that same name
+     */
     private static CLICommand onlyIfAllCommandNamesUnique(List<CLICommand> commandList, CLICommand command) throws Exception {
 
         for (CLICommand eachCurrentCommand : commandList) {

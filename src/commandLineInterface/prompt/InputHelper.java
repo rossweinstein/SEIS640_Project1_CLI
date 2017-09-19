@@ -19,7 +19,9 @@ public class InputHelper {
 	// a Scanner allows us to get user input from the keyboard
 	private Scanner input;
 
-	// no arg constructor, sets up our Scanner
+	/**
+	 * No arg constructor.
+	 */
 	public InputHelper() {
 		this.input = new Scanner(System.in);
 	}
