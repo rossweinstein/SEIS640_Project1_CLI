@@ -44,7 +44,7 @@ public class FunWithStringsController implements CLICommand {
      * Create a Map which will serve as this CLICommand's dictionary stating the name
      * of each command and the function it performs. This is needed for both the
      * help menu within our CLI project, but also to identify which commands belong
-     * to which class
+     * to which class.
      *
      * @return the completed Map with all commands and descriptions
      */

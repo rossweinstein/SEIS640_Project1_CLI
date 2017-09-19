@@ -21,37 +21,40 @@ public class FunWithStrings {
 	public FunWithStrings() {}
 
 	/**
+	 * Finds the length of the given string
 	 *
-	 * @param words
-	 * @return
+	 * @param words the String to find the length of
+	 * @return the length of the given string
 	 */
 	public String length(String words) {
 		return String.valueOf(words.length());
 	}
 
 	/**
+	 * Takes any character that is not uppercase and makes them uppercase
 	 *
-	 * @param words
-	 * @return
+	 * @param words the String to manipulate
+	 * @return a String with all uppercase letters
 	 */
 	public String shout(String words) {
 		return words.toUpperCase();
 	}
 
 	/**
-	 *
-	 * @param words
-	 * @return
+	 * Takes any character that is not lowercase and makes them lowercase
+     *
+	 * @param words the String to manipulate
+	 * @return a String with all lowercase letters
 	 */
 	public String whisper(String words) {
 		return words.toLowerCase();
 	}
 
 	/**
-	 * Takes in a given
+	 * Reverses the characters of a String.
      *
-	 * @param words
-	 * @return
+	 * @param words the String to manipulate
+	 * @return a String with all the characters in reverse order
 	 */
 	public String reverse(String words) {
 
@@ -65,15 +68,4 @@ public class FunWithStrings {
 		}
 		return reversedWord;
 	}
-
-	/**
-	 *
-	 *
-	 * @param arguments
-	 * @return
-	 */
-	private String joinWords(String[] arguments) {
-		return String.join(" ", arguments);
-	}
-
 }
