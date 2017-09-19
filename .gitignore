@@ -1,6 +1,3 @@
-#file: ~/.gitignore
-.DS_Store
-.idea
-out
-SEIS640_Project1.iml
-*.class
+/.idea
+/out
+/SEIS640_Project1.iml
